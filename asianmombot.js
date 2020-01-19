@@ -28,5 +28,5 @@ client.on("message", (receivedMessage) => {
 
 })
 
-bot_token = '';
+bot_token = ''; // Token hidden for privacy.
 client.login(bot_token);
