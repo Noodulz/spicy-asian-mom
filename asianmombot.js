@@ -28,5 +28,5 @@ client.on("message", (receivedMessage) => {
 
 })
 
-bot_token = 'NjY4MDE0MDMyNzI0MTY0NjI4.XiQ9-A.dTWHAbz-cWpEJ8lvXr2iF9UQ6cs';
+bot_token = '';
 client.login(bot_token);
