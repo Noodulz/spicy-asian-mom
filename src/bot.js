@@ -8,6 +8,10 @@ const anotherTerm = "STUDY";
 const yetAnotherTerm = "Study";
 const anotherAnotherTerm = "studying";
 const buildUponAnotherStudy = "Studying";
+// Added trigger when mentioning fail words
+const failWord = "fail";
+const failWordTwo = "failed";
+const failWordThree = "failure";
 
 // Array of random messages mom bot sends. This is not the entire list of phrases she will send, but a rough idea
 var listOfAnswers = ['Yucky daughter', 'GO STUDY RIGHT NOW U UNGRATEFUL DAUGHTER', 'YOU DISAPPOINTMENT', 'WHY U BORN SO DUMB', 'YOU DISAPPOINT YOUR FAMILY', 'GO DO HOMEWORK! NOW!!!', 'YOUR COUSIN IS DOCTOR ALREADY!!', 'Stop think about girls and think about FUTURE!', 'DISGRACEFUL. GO STUDY', 'YOU DISHONOR ME BY NOT STUDYING!', 'Still no study? GO GET THE RICE PADDLE', 'NO RICE FO YU', 'NO WORK?? NO BOBA MONEY', 'GO TO THE CORNER AND KNEEL', 'NO FRY RICE FOR YOU', 'WHY U NO STUDY AND GET MARRY YET??', 'YOU GET CANCER IF YOU NO STUDY', 'A-SIAN, NOT B-SIAN', 'You forget to study? I forget to feed you.', 'You get below C, I PUT YOU BELOW SEA', 'WHY U GET F IN GENDER HUH????', 'U 1 in billion, now study and get me 1 billion money', 'YOU DISAPPOINT YOUR FAMILY', 'GO DO HOMEWORK NOW!!!',
@@ -27,8 +31,8 @@ client.on("message", (receivedMessage) => {
     }
     // Might've been to bypass the promises error. Checks to see if the message is blank or not in the first few chars
     if (!receivedMessage.content[0] == " " && !receivedMessage.content[1] == "") {
-        // Checks the user's message for any of the terms mentioned above related to studying. Also added feature to trigger bot when bot is tagged as well
-        if ((receivedMessage.content.includes(term) || receivedMessage.content.includes(anotherTerm) || receivedMessage.content.includes(yetAnotherTerm) || receivedMessage.content.includes(client.user.id))) {
+        // Checks the user's message for any of the terms mentioned above related to studying. Also added feature to trigger bot when bot is tagged as well as mentions fail words
+        if ((receivedMessage.content.includes(term) || receivedMessage.content.includes(anotherTerm) || receivedMessage.content.includes(yetAnotherTerm) || || receivedMessage.content.includes(failWord) || receivedMessage.content.includes(failWordTwo) || receivedMessage.content.includes(failWordThree) || receivedMessage.content.includes(client.user.id))) {
             // Gets a random number to call from the array of messages to send
             var randomNum = Math.floor((Math.random((listOfAnswers.length + 1)) * listOfAnswers.length));
             var getAnAnswer = listOfAnswers[randomNum];
