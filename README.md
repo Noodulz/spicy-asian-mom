@@ -8,5 +8,7 @@ Note that this was made purely out of a parodical idea and that I mean no offens
 
 Feel free to make pull requests or submit an issue for any other phrases you'd like to be put into Spicy Asian Mom Bot! I'll gladly take more into consideration ;)
 
+## Bot Hosting Instructions
+
 ## Invite Link
 http://tiny.cc/t5wwiz
